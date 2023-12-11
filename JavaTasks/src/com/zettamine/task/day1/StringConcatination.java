@@ -10,26 +10,19 @@ public class StringConcatination {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Inmate's name : ");
 		String inmateName = sc.nextLine();
-		for(int i = 0 ; i < inmateName.length(); i++)
+
+		if(inmateName.matches("([^a-z]+).([^A-Z]+)"))
 		{
-			char ch = inmateName.charAt(i);
-			if(Character.isDigit(ch))
-			{
-				throw new InvalidNameException("Invalid Name");
-			}
+			throw new InvalidNameException();
 		}
-		
 		System.out.print("Inmate's fathers name : ");
 		String inmateFatherName = sc.nextLine();
 		
-		for(int i = 0 ; i < inmateFatherName.length(); i++)
+		if(inmateName.matches("([^a-z]+).([^A-Z]+)"))
 		{
-			char ch = inmateFatherName.charAt(i);
-			if(Character.isDigit(ch))
-			{
-				throw new InvalidNameException("Invalid Name");
-			}
+			throw new InvalidNameException();
 		}
+		
 		
 		String fullName = inmateName.concat(" ").concat(inmateFatherName);
 		System.out.println(fullName.toUpperCase());
