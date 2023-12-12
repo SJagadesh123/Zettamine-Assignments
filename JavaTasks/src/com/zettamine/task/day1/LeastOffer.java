@@ -38,7 +38,7 @@ public class LeastOffer {
 		{
 			if(discount[i] == min)
 			{
-				System.out.print("Item with minimum discount : "+items[i][0] + "   ");
+				System.out.print("Item with minimum discount : "+ items[i][0] + "   ");
 			}
 		}
 		
