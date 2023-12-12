@@ -13,7 +13,6 @@ public class Hosteller extends HostelStudent {
 		this.roomNumber = roomNumber;
 	}
 
-
 	public String getHostelName() {
 		return hostelName;
 	}
