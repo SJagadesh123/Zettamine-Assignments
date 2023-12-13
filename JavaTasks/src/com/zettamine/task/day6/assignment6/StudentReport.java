@@ -64,15 +64,14 @@ public class StudentReport {
 		
 	}
 
-	public static HashMap<String, Integer> getReport(ArrayList studentList)
+	public static HashMap<String, Integer> getReport(ArrayList<Student> studentList)
 	{
 		HashMap<String, Integer> map1 = new HashMap<String, Integer>();
 		
-		for(Object obj : studentList)
+		for(Student student : studentList)
 		{
-			Student student = (Student)obj;
 			Integer count = map1.get(student.getLocation());
-			if(map1.get(student.getLocation()) == null)
+			if(count == null)
 			{
 				map1.put(student.getLocation(), 1);
 			}
